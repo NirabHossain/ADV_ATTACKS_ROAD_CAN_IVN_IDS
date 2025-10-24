@@ -1,0 +1,16 @@
+﻿Capture,Modified,Msg. Conflict,\# Logs
+Accelerator Attack (Drive)                 ,,,2
+Accelerator Attack (Reverse)                    ,,,2
+Correlated Signal Attack                    ,T,,3
+Correlated Signal Attack    ,,T,3
+Fuzzing Attack                            ,T,,3
+Max Engine Coolant Temp Attack                ,T,,1
+Max Engine Coolant Temp Attack ,,T,1
+Max Speedometer Attack         ,T,,3
+Max Speedometer Attack       ,,T,3
+Reverse Light Off Attack                    ,T,,3
+Reverse Light Off Attack     ,,T,3
+Reverse Light On Attack                     ,T,,3
+Reverse Light On Attack      ,,T,3
+Dyno Various Ambient,,                       N/A,10
+Road Various Ambient,,                       N/A,2
