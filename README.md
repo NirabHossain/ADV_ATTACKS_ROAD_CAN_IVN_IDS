@@ -33,10 +33,10 @@ The following IDS architectures are implemented and evaluated:
 | Model | Type |
 |-----|-----|
 | Decision Tree (DT) | Shallow |
-| Random Forest (RF) | Ensemble |
-| Extra Trees (ET) | Ensemble |
-| XGBoost (XGB) | Boosted Trees |
-| Deep Neural Network (DNN) | Fully-connected |
+| Random Forest (RF) | Shallow |
+| Extra Trees (ET) | Shallow |
+| XGBoost (XGB) | Shallow |
+| Deep Neural Network (DNN) | Deep Learning |
 
 All models operate at the **frame level**, using **CAN payload bytes (D0–D7)** as features.
 
