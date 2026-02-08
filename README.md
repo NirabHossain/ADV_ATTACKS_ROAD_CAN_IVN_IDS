@@ -203,6 +203,7 @@ pip install -r requirements.txt
 3. **Verify installed versions (optional)**:
 ```python -c "import sys, tensorflow as tf, numpy as np, sklearn, art; print('Python', sys.version.split()[0]); print('TensorFlow', tf.__version__); print('NumPy', np.__version__); print('scikit-learn', sklearn.__version__); print('ART', art.__version__)"```
 
+---
 
 
 ## Acknowledgement
