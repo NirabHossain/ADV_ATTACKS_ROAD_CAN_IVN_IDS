@@ -68,7 +68,7 @@ We use the **ROAD CAN IDS Dataset**:
 - Fuzzing attack (FA)
 - Five fabrication attacks: max engine coolant temp (MECTA), max speedometer (MSA), reverse light off (RLOFFA), and reverse light on (RLONA), correlated signal (CSA) attacks. 
 
-For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
+For more details, refer to the [Verma et al., *PLOS ONE*, 2024](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
 
 ## 📁 Repository Structure
 
@@ -109,8 +109,6 @@ road/
 - RLONA (Reverse Light On)
 - CSA (Correlated Signal Attack)
 
-📖 Dataset reference:  
-Verma et al., *PLOS ONE*, 2024
 
 ---
 
