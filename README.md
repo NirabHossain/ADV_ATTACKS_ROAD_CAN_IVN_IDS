@@ -1,8 +1,6 @@
 # Adversarial Evaluation of CAN-Bus Intrusion Detection Systems (IDS)
 
-This repository contains the full implementation and experimental pipeline for evaluating **adversarial robustness of machine-learning–based Intrusion Detection Systems (IDS)** operating on the **Controller Area Network (CAN)** using the **ROAD dataset**.
-
-The work systematically analyzes **false alarms (false positives)** and **missed attacks (false negatives)** under **protocol-compliant, payload-level adversarial perturbations**, following a unified evaluation framework.
+This repository contains the full implementation and experimental pipeline for evaluating **adversarial robustness of machine-learning–based Intrusion Detection Systems (IDS)** operating on the **Controller Area Network (CAN)** using the **ROAD dataset**. The work systematically analyzes **false alarms (false positives)** and **missed attacks (false negatives)** under **protocol-compliant, payload-level adversarial perturbations**, following a unified evaluation framework.
 
 This repository accompanies the research paper:
 
@@ -207,7 +205,14 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 3. **Verify installed versions (optional)**:
-```python -c "import sys, tensorflow as tf, numpy as np, sklearn, art; print('Python', sys.version.split()[0]); print('TensorFlow', tf.__version__); print('NumPy', np.__version__); print('scikit-learn', sklearn.__version__); print('ART', art.__version__)"```
+```bash
+python -c import sys, tensorflow as tf, numpy as np, sklearn, art; 
+print('Python', sys.version.split()[0]); 
+print('TensorFlow', tf.__version__); 
+print('NumPy', np.__version__); 
+print('scikit-learn', sklearn.__version__); 
+print('ART', art.__version__)
+```
 
 ---
 
