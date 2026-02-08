@@ -66,8 +66,11 @@ We use the **ROAD CAN IDS Dataset**:
 - ~50K malicious frames
 - Realistic **Fuzzing & fabrication attacks**
 - Fuzzing attack (FA)
-- Five fabrication attacks: max engine coolant temp (MECTA), max speedometer (MSA), reverse light off (RLOFFA), and reverse light on (RLONA), correlated signal (CSA) attacks. For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
+- Five fabrication attacks: max engine coolant temp (MECTA), max speedometer (MSA), reverse light off (RLOFFA), and reverse light on (RLONA), correlated signal (CSA) attacks. 
 
+For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
+
+## 📁 Repository Structure
 
 Here is a detailed tree structure for the dataset used in this project:
 
@@ -111,7 +114,6 @@ Verma et al., *PLOS ONE*, 2024
 
 ---
 
-## 📁 Repository Structure
 
 ## Framework Overview
 
