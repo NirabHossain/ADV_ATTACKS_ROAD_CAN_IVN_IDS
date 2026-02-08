@@ -28,7 +28,8 @@ Modern vehicles rely on the CAN bus for safety-critical communication but lack b
 
 ## Dataset
 
-- **ROAD Dataset:** This dataset contains multiple hours of recorded data, with 3 hours for training and 30 minutes for testing, covering various driving scenarios. It includes five masquerade attacks: correlated signal, max engine, max speedometer, reverse light off, and reverse light on attacks. For more details, refer to the [ROAD dataset paper](#).
+- **ROAD Dataset:** This dataset contains multiple hours of recorded data, with 3 hours for training and 30 minutes for testing, covering various driving scenarios. It includes five masquerade attacks: correlated signal, max engine, max speedometer, reverse light off, and reverse light on attacks. For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
+
 
 Here is a detailed tree structure for the dataset used in this project:
 
