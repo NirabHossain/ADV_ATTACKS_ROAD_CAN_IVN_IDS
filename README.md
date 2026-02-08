@@ -78,6 +78,7 @@ Train five classifiers for binary frame-level IDS:
 
 The following IDS architectures are implemented and evaluated:
 <div align="center">
+
 | Model | Type |
 |-----|-----|
 | Decision Tree (DT) | Shallow |
@@ -85,6 +86,7 @@ The following IDS architectures are implemented and evaluated:
 | Extra Trees (ET) | Shallow |
 | XGBoost (XGB) | Shallow |
 | Deep Neural Network (DNN) | Deep Learning |
+
 </div>
 All models operate at the **frame level**, using **CAN payload bytes (D0–D7)** as features.
 
