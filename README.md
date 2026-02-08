@@ -18,10 +18,10 @@ Modern vehicles rely on the CAN bus for safety-critical communication but lack b
 
 ### Main Objectives
 - Evaluate **adversarial failure modes** of CAN IDS:
-  - **False alarms** (benign → malicious)
+  - **False alarm** (benign → malicious)
   - **Missed attacks** (malicious → benign)
 - Apply **protocol-compliant adversarial attacks** on CAN payload bytes
-- Compare robustness across **shallow ML models and deep neural networks**
+- Compare robustness across **shallow ML models and deep neural networks (DNN)**
 - Quantify robustness using **ASR (Attack Success Rate)** and **MCC**
 
 ---
@@ -118,6 +118,7 @@ road/
 <p align="center">
   <img src="workflow.png" alt="Workflow for IDS training, adversarial IVN frame generation, and
 evaluation of benign and adversarial predictions with FN, FP, and MCC." width="900"/>
+
   <em>Workflow for IDS training, adversarial IVN frame generation, and evaluation of benign and adversarial predictions with FN, FP, ASR and MCC.</em>
 </p>
 
@@ -167,6 +168,40 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
   - Archive folder for older versions/experiments.
 
 ---
+
+## Installation of Dependencies
+
+To ensure that all required packages are installed with compatible versions, use the `requirements.txt` file in this repository.
+
+This project is tested with:
+- Python `3.10`
+- TensorFlow `2.12.0`
+- NumPy `1.23`
+- ART (`adversarial-robustness-toolbox`) `1.16`
+- scikit-learn `1.3.2`
+
+### Installing Dependencies
+
+1. **Using Conda**:
+
+```bash
+conda create --name adv_ids_env python=3.10 -y
+conda activate adv_ids_env
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+2. **Using venv (Python built-in)**:
+
+```bash
+python3.10 -m venv .venv
+source .venv/bin/activate        # macOS/Linux
+# .venv\Scripts\activate         # Windows
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+3. **Verify installed versions (optional)**:
+```python -c "import sys, tensorflow as tf, numpy as np, sklearn, art; print('Python', sys.version.split()[0]); print('TensorFlow', tf.__version__); print('NumPy', np.__version__); print('scikit-learn', sklearn.__version__); print('ART', art.__version__)"```
 
 
 
