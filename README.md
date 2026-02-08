@@ -128,29 +128,26 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
 
 ### Jupyter Notebooks
 
-- **`preprocessing.ipynb`**  
-  Preprocesses ROAD CAN logs and prepares cleaned inputs for downstream experiments.
+- **`preprocessing.ipynb`**:
+  - Notebook to preprocess ROAD CAN log data and prepare inputs for IDS and adversarial experiments.
 
-- **`IDS_models.ipynb`**  
-  Trains and evaluates IDS models on benign and attack data.
+- **`Stat_breakdown.ipynb`**:
+  - Notebook for statistical breakdown and this generates *Table I*.
 
-- **`ADV_Attacks_FP.ipynb`**  
-  Adversarial attack experiments focused on false positives (FP).
+- **`IDS_models.ipynb`**:
+  - Notebook to train and evaluate IDS models on benign and attack scenarios and to generate *Table II*.
 
-- **`ADV_Attacks_FN.ipynb`**  
-  Adversarial attack experiments focused on false negatives (FN).
+- **`ADV_Attacks_FP.ipynb`**:
+  - Notebook for adversarial experiments focused on false alarm, i.e., false positives (FPs) only.
 
-- **`ADV_Attacks_MCC.ipynb`**  
-  Adversarial attack experiments and evaluation using MCC.
+- **`ADV_Attacks_FN.ipynb`**:
+  - Notebook for adversarial experiments focused on missed attacks, i.e., false negatives (FNs) only.
 
-- **`ADV_attacks_results.ipynb`**  
-  Aggregates and summarizes adversarial attack experiment results.
+- **`ADV_Attacks_MCC.ipynb`**:
+  - Notebook for adversarial experiments focused on false alarm and missed attacks combined with MCC-based performance analysis.
 
-- **`Stat_breakdown.ipynb`**  
-  Statistical breakdown and comparative result analysis.
-
-- **`road_ADV_Attacks_FP copy.ipynb`**  
-  Working/backup variant for FP attack experiments.
+- **`ADV_attacks_results.ipynb`**:
+  - Notebook to aggregate, compare, and summarize adversarial attack results and to generate *Table III - Table VIII*.
 
 ### Data and Artifacts
 
@@ -161,13 +158,13 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
   Intermediate preprocessed datasets/features used by notebooks.
 
 - **`models/`**  
-  Saved trained models and related artifacts.
+  Saved trained models.
 
 - **`results/`**  
   Exported results, tables, and experiment outputs.
 
-- **`*.csv` files (e.g., `fa_fp.csv`, `mecta_fn.csv`, `attack_data.csv`)**  
-  Metric tables and per-attack evaluation summaries.
+- **`old/`**:
+  - Archive folder for older versions/experiments.
 
 ---
 
