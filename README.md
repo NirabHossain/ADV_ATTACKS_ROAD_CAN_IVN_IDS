@@ -206,11 +206,11 @@ pip install -r requirements.txt
 ```
 3. **Verify installed versions (optional)**:
 ```bash
-python -c import sys, tensorflow as tf, numpy as np, sklearn, art; 
-print('Python', sys.version.split()[0]); 
-print('TensorFlow', tf.__version__); 
-print('NumPy', np.__version__); 
-print('scikit-learn', sklearn.__version__); 
+python -c import sys, tensorflow as tf, numpy as np, sklearn, art
+print('Python', sys.version.split()[0])
+print('TensorFlow', tf.__version__)
+print('NumPy', np.__version__)
+print('scikit-learn', sklearn.__version__)
 print('ART', art.__version__)
 ```
 
@@ -219,6 +219,6 @@ print('ART', art.__version__)
 
 ## Acknowledgement
 
-This manuscript has been authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The publisher, by accepting the article for publication, acknowledges that the U.S. Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of the manuscript, or allow others to do so, for U.S. Government purposes. The DOE will provide public access to these results in accordance with the DOE Public Access Plan. There was no additional external funding received for this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of this manuscript. (http://energy.gov/downloads/doe-public-access-plan). This research was sponsored in part by Oak Ridge National Laboratory’s (ORNL’s) Laboratory Directed Research and Development program.
+This manuscript has been authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The publisher, by accepting the article for publication, acknowledges that the U.S. Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of the manuscript, or allow others to do so, for U.S. Government purposes. The DOE will provide public access to these results in accordance with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan). There was no additional external funding received for this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of this manuscript. This research was sponsored in part by Oak Ridge National Laboratory’s (ORNL’s) Laboratory Directed Research and Development program.
 
 ---
