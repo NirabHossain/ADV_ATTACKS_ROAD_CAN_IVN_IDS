@@ -26,39 +26,6 @@ Modern vehicles rely on the CAN bus for safety-critical communication but lack b
 
 ---
 
-## Dataset
-
-- **ROAD Dataset:** This dataset contains multiple hours of recorded data, with 3 hours for training and 30 minutes for testing, covering various driving scenarios. It includes five masquerade attacks: correlated signal, max engine, max speedometer, reverse light off, and reverse light on attacks. For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
-
-
-Here is a detailed tree structure for the dataset used in this project:
-
-```text
-road/
-├── ambient/
-├── attacks/
-│   ├── correlated_signal_attack_1.log
-│   ├── correlated_signal_attack_2.log
-│   ├── correlated_signal_attack_3.log
-│   ├── fuzzing_attack_1.log
-│   ├── fuzzing_attack_2.log
-│   ├── fuzzing_attack_3.log
-│   ├── max_engine_coolant_temp_attack.log
-│   ├── max_speedometer_attack_1.log
-│   ├── max_speedometer_attack_2.log
-│   ├── max_speedometer_attack_3.log
-│   ├── reverse_light_off_attack_1.log
-│   ├── reverse_light_off_attack_2.log
-│   ├── reverse_light_off_attack_3.log
-│   ├── reverse_light_on_attack_1.log
-│   ├── reverse_light_on_attack_2.log
-│   ├── reverse_light_on_attack_3.log
-└── signal_extractions/
-    ├── ambient/
-    ├── attacks/
-    └── DBC/
-```
-
 ## 🧠 Models Evaluated
 
 The following IDS architectures are implemented and evaluated:
@@ -97,7 +64,39 @@ We use the **ROAD CAN IDS Dataset**:
 - ~3.5 hours of real vehicle CAN traffic
 - ~1.5M benign frames
 - ~50K malicious frames
-- Realistic **fabrication & masquerade attacks**
+- Realistic **Fuzzing & fabrication attacks**
+- Fuzzing attack (FA)
+- Five fabrication attacks: max engine coolant temp (MECTA), max speedometer (MSA), reverse light off (RLOFFA), and reverse light on (RLONA), correlated signal (CSA) attacks. For more details, refer to the [ROAD dataset paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0296879).
+
+
+Here is a detailed tree structure for the dataset used in this project:
+
+```text
+road/
+├── ambient/
+├── attacks/
+│   ├── correlated_signal_attack_1.log
+│   ├── correlated_signal_attack_2.log
+│   ├── correlated_signal_attack_3.log
+│   ├── fuzzing_attack_1.log
+│   ├── fuzzing_attack_2.log
+│   ├── fuzzing_attack_3.log
+│   ├── max_engine_coolant_temp_attack.log
+│   ├── max_speedometer_attack_1.log
+│   ├── max_speedometer_attack_2.log
+│   ├── max_speedometer_attack_3.log
+│   ├── reverse_light_off_attack_1.log
+│   ├── reverse_light_off_attack_2.log
+│   ├── reverse_light_off_attack_3.log
+│   ├── reverse_light_on_attack_1.log
+│   ├── reverse_light_on_attack_2.log
+│   ├── reverse_light_on_attack_3.log
+└── signal_extractions/
+    ├── ambient/
+    ├── attacks/
+    └── DBC/
+```
+
 
 ### Attack Types Used
 - FA (Fuzzing Attack)
