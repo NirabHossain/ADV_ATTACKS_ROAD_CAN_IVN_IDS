@@ -1,6 +1,8 @@
-# Adversarial Evaluation of CAN-Bus Intrusion Detection Systems (IDS)
+# Evaluating False Alarm and Missing Attacks in CAN IDS
 
-This repository contains the full implementation and experimental pipeline for evaluating **adversarial robustness of machine-learning–based Intrusion Detection Systems (IDS)** operating on the **Controller Area Network (CAN)** using the **ROAD dataset**. The work systematically analyzes **false alarms (false positives)** and **missed attacks (false negatives)** under **protocol-compliant, payload-level adversarial perturbations**, following a unified evaluation framework.
+This repository contains the full implementation and experimental pipeline for evaluating **adversarial robustness of machine-learning–based Intrusion Detection Systems (IDS)** operating on the **Controller Area Network (CAN)** using the **ROAD dataset**. 
+
+The work systematically analyzes **false alarms (false positives)** and **missed attacks (false negatives)** under **protocol-compliant, payload-level adversarial perturbations**, following a unified evaluation framework.
 
 This repository accompanies the research paper:
 
@@ -12,22 +14,70 @@ This repository accompanies the research paper:
 
 ## 📌 Project Overview
 
-Modern vehicles rely on the CAN bus for safety-critical communication but lack built-in security mechanisms. Machine-learning–based IDS have shown strong baseline detection performance, yet their **robustness against adversarial manipulation** remains underexplored.
+Modern vehicles rely on the CAN bus for safety-critical communication but lack built-in security mechanisms. Machine-learning–based IDS achieve strong detection accuracy under benign conditions, yet their **robustness against adversarial manipulation remains insufficiently understood**.
 
-### Main Objectives
+This project develops a **unified adversarial evaluation framework** for CAN intrusion detection systems (IDS), explicitly analyzing two coupled failure modes under realistic, protocol-compliant constraints.
+
+### 🎯 Main Objectives
+
 - Evaluate **adversarial failure modes** of CAN IDS:
-  - **False alarm** (benign → malicious)
-  - **Missed attacks** (malicious → benign)
-- Apply **protocol-compliant adversarial attacks** on CAN payload bytes
-- Compare robustness across **shallow ML models and deep neural networks (DNN)**
-- Quantify robustness using **ASR (Attack Success Rate)** and **MCC**
+  - **False alarms (False Positives):** benign → malicious
+  - **Missed attacks (False Negatives):** malicious → benign
+- Apply **protocol-compliant, payload-only adversarial perturbations** on CAN frames
+- Compare robustness across **shallow ML models (DT, RF, ET, XGB)** and **Deep Neural Networks (DNN)**
+- Quantify robustness using:
+  - **ASR[FP]** – False-alarm inducibility
+  - **ASR[FN]** – Missed-attack inducibility
+  - **MCC** – Overall performance under class imbalance
 
 ---
+
+
+## ❓ Key Research Question
+How do shallow ML and DNN-based CAN IDS differ in **robustness to adversarial manipulation**, when both **false alarms** and **missed attacks** are evaluated *separately and jointly* under CAN-valid constraints?
+<!--
+### Hypothesis
+1. **Clean-test accuracy is not sufficient**: IDS that perform well on benign settings can still exhibit significant vulnerability under adversarial perturbations.
+2. Under **payload-only, protocol-compliant attacks**, IDS will generally be:
+   - relatively **robust to false-alarm induction** on benign frames, but
+   - substantially **more vulnerable to missed-attack induction** on malicious frames.
+3. **Model architecture matters**: ensemble tree methods (especially **Extra Trees**) may show more consistent missed-attack robustness than other shallow learners and DNNs under strong multi-step attacks.
+-->
+---
+
+## 🧩 Experimental Workflow (Paper)
+
+### Phase 1 — Dataset + Frame-Level Modeling
+- Use the **ROAD CAN IDS dataset** (12 ambient captures, 33 attack captures; ~3.5 hours of CAN traffic).  
+- Treat each CAN frame **independently** (no windowing): features are payload bytes **D0–D7**, label is benign (0) vs malicious (1).  
+
+### Phase 2 — Train IDS Baselines
+Train five classifiers for binary frame-level IDS:
+- DT, RF, ET, XGB (shallow)
+- DNN (4 fully-connected layers, ReLU; sigmoid output)
+
+### Phase 3 — Protocol-Compliant Adversarial Evaluation
+- Threat model: **gray-bus attacker** + **white-box** knowledge for gradient-based perturbations.
+- Perturbation constraints:
+  - **CAN ID and DLC fixed**
+  - **payload bytes only**
+  - values **clipped to [0, 255]**
+- Generate adversarial frames using **FGSM / BIM / PGD** with budgets **ε ∈ {1, 5}**
+- Use a differentiable **DNN surrogate** to craft attacks; reuse adversarial samples to evaluate shallow models (transfer-style).
+
+### Phase 4 — Metrics (Robustness + Imbalance-Aware Performance)
+- **ASR** (Attack Success Rate) computed separately for:
+  - **ASR[FP]** on adversarially perturbed benign frames
+  - **ASR[FN]** on adversarially perturbed malicious frames
+- **MCC** (Matthews Correlation Coefficient) on the full (imbalanced) test set to summarize joint performance.
+
+---
+
 
 ## 🧠 Models Evaluated
 
 The following IDS architectures are implemented and evaluated:
-
+<div align="center">
 | Model | Type |
 |-----|-----|
 | Decision Tree (DT) | Shallow |
@@ -35,7 +85,7 @@ The following IDS architectures are implemented and evaluated:
 | Extra Trees (ET) | Shallow |
 | XGBoost (XGB) | Shallow |
 | Deep Neural Network (DNN) | Deep Learning |
-
+</div>
 All models operate at the **frame level**, using **CAN payload bytes (D0–D7)** as features.
 
 ---
