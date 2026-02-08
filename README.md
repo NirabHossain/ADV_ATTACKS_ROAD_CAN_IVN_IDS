@@ -124,6 +124,55 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
 ---
 
 
+## 💻 Code Structure
+
+### Jupyter Notebooks
+
+- **`preprocessing.ipynb`**  
+  Preprocesses ROAD CAN logs and prepares cleaned inputs for downstream experiments.
+
+- **`IDS_models.ipynb`**  
+  Trains and evaluates IDS models on benign and attack data.
+
+- **`ADV_Attacks_FP.ipynb`**  
+  Adversarial attack experiments focused on false positives (FP).
+
+- **`ADV_Attacks_FN.ipynb`**  
+  Adversarial attack experiments focused on false negatives (FN).
+
+- **`ADV_Attacks_MCC.ipynb`**  
+  Adversarial attack experiments and evaluation using MCC.
+
+- **`ADV_attacks_results.ipynb`**  
+  Aggregates and summarizes adversarial attack experiment results.
+
+- **`Stat_breakdown.ipynb`**  
+  Statistical breakdown and comparative result analysis.
+
+- **`road_ADV_Attacks_FP copy.ipynb`**  
+  Working/backup variant for FP attack experiments.
+
+### Data and Artifacts
+
+- **`road/`**  
+  ROAD dataset directory (raw logs + extracted signals).
+
+- **`preprocessed/`**  
+  Intermediate preprocessed datasets/features used by notebooks.
+
+- **`models/`**  
+  Saved trained models and related artifacts.
+
+- **`results/`**  
+  Exported results, tables, and experiment outputs.
+
+- **`*.csv` files (e.g., `fa_fp.csv`, `mecta_fn.csv`, `attack_data.csv`)**  
+  Metric tables and per-attack evaluation summaries.
+
+---
+
+
+
 ## Acknowledgement
 
 This manuscript has been authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The publisher, by accepting the article for publication, acknowledges that the U.S. Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of the manuscript, or allow others to do so, for U.S. Government purposes. The DOE will provide public access to these results in accordance with the DOE Public Access Plan. There was no additional external funding received for this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of this manuscript. (http://energy.gov/downloads/doe-public-access-plan). This research was sponsored in part by Oak Ridge National Laboratory’s (ORNL’s) Laboratory Directed Research and Development program.
