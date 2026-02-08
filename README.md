@@ -88,6 +88,7 @@ The following IDS architectures are implemented and evaluated:
 | Deep Neural Network (DNN) | Deep Learning |
 
 </div>
+
 All models operate at the **frame level**, using **CAN payload bytes (D0–D7)** as features.
 
 ---
