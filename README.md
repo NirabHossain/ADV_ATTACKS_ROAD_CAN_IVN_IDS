@@ -118,7 +118,6 @@ road/
 <p align="center">
   <img src="workflow.png" alt="Workflow for IDS training, adversarial IVN frame generation, and
 evaluation of benign and adversarial predictions with FN, FP, and MCC." width="900"/>
-
   <em>Workflow for IDS training, adversarial IVN frame generation, and evaluation of benign and adversarial predictions with FN, FP, ASR and MCC.</em>
 </p>
 
@@ -131,24 +130,31 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
 
 - **`preprocessing.ipynb`**:
   - Notebook to preprocess ROAD CAN log data and prepare inputs for IDS and adversarial experiments.
+  - Generated preprocessed data saved in `preprocessed/` and merged attack data saved as `results/attack_data.csv`.
 
 - **`Stat_breakdown.ipynb`**:
-  - Notebook for statistical breakdown and this generates *Table I*.
+  - Notebook for statistical breakdown.
+  - To generate *Table I*.
 
 - **`IDS_models.ipynb`**:
-  - Notebook to train and evaluate IDS models on benign and attack scenarios and to generate *Table II*.
+  - Notebook to train and evaluate IDS models on benign and attack scenarios.
+  - To generate *Table II* saved in `results/`.
 
 - **`ADV_Attacks_FP.ipynb`**:
-  - Notebook for adversarial experiments focused on false alarm, i.e., false positives (FPs) only.
+  - Notebook for adversarial experiments focused on false positives (false alarm).
+  - Output saved in `results/`.
 
 - **`ADV_Attacks_FN.ipynb`**:
-  - Notebook for adversarial experiments focused on missed attacks, i.e., false negatives (FNs) only.
+  - Notebook for adversarial experiments focused on false negatives (missed attacks).
+  - Output saved in `results/`.
 
 - **`ADV_Attacks_MCC.ipynb`**:
   - Notebook for adversarial experiments focused on false alarm and missed attacks combined with MCC-based performance analysis.
+  - Output saved in `results/`.
 
 - **`ADV_attacks_results.ipynb`**:
-  - Notebook to aggregate, compare, and summarize adversarial attack results and to generate *Table III - Table VIII*.
+  - Notebook to aggregate, compare, and summarize adversarial attack results.
+  - To generate *Table III - Table VIII* saved in `results/`.
 
 ### Data and Artifacts
 
