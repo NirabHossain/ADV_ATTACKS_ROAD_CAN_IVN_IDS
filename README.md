@@ -33,46 +33,46 @@ Modern vehicles rely on the CAN bus for safety-critical communication but lack b
 
 Here is a detailed tree structure for the dataset used in this project:
 
-
+```text
 road/
-├── ambient
-├── attacks
+├── ambient/
+├── attacks/
 ├── data_table.csv
 ├── readme.md
-└── signal_extractions
-├── ambient
-│ ├── ambient_dyno_drive_basic_long.csv
-│ ├── ambient_dyno_drive_basic_short.csv
-│ ├── ambient_dyno_drive_benign_anomaly.csv
-│ ├── ambient_dyno_drive_extended_long.csv
-│ ├── ambient_dyno_drive_extended_short.csv
-│ ├── ambient_dyno_drive_radio_infotainment.csv
-│ ├── ambient_dyno_drive_winter.csv
-│ ├── ambient_dyno_exercise_all_bits.csv
-│ ├── ambient_dyno_idle_radio_infotainment.csv
-│ ├── ambient_dyno_reverse.csv
-│ ├── ambient_highway_street_driving_diagnostics.csv
-│ ├── ambient_highway_street_driving_long.csv
-├── attacks
-│ ├── accelerator_attack_drive_1.csv
-│ ├── accelerator_attack_drive_2.csv
-│ ├── accelerator_attack_reverse_1.csv
-│ ├── accelerator_attack_reverse_2.csv
-│ ├── correlated_signal_attack_1_masquerade.csv
-│ ├── correlated_signal_attack_2_masquerade.csv
-│ ├── correlated_signal_attack_3_masquerade.csv
-│ ├── max_engine_coolant_temp_attack_masquerade.csv
-│ ├── max_speedometer_attack_1_masquerade.csv
-│ ├── max_speedometer_attack_2_masquerade.csv
-│ ├── max_speedometer_attack_3_masquerade.csv
-│ ├── metadata.json
-│ ├── reverse_light_off_attack_1_masquerade.csv
-│ ├── reverse_light_off_attack_2_masquerade.csv
-│ ├── reverse_light_off_attack_3_masquerade.csv
-│ ├── reverse_light_on_attack_1_masquerade.csv
-│ ├── reverse_light_on_attack_2_masquerade.csv
-│ ├── reverse_light_on_attack_3_masquerade.csv
-└── DBC
+└── signal_extractions/
+    ├── ambient/
+    │   ├── ambient_dyno_drive_basic_long.csv
+    │   ├── ambient_dyno_drive_basic_short.csv
+    │   ├── ambient_dyno_drive_benign_anomaly.csv
+    │   ├── ambient_dyno_drive_extended_long.csv
+    │   ├── ambient_dyno_drive_extended_short.csv
+    │   ├── ambient_dyno_drive_radio_infotainment.csv
+    │   ├── ambient_dyno_drive_winter.csv
+    │   ├── ambient_dyno_exercise_all_bits.csv
+    │   ├── ambient_dyno_idle_radio_infotainment.csv
+    │   ├── ambient_dyno_reverse.csv
+    │   ├── ambient_highway_street_driving_diagnostics.csv
+    │   └── ambient_highway_street_driving_long.csv
+    ├── attacks/
+    │   ├── accelerator_attack_drive_1.csv
+    │   ├── accelerator_attack_drive_2.csv
+    │   ├── accelerator_attack_reverse_1.csv
+    │   ├── accelerator_attack_reverse_2.csv
+    │   ├── correlated_signal_attack_1_masquerade.csv
+    │   ├── correlated_signal_attack_2_masquerade.csv
+    │   ├── correlated_signal_attack_3_masquerade.csv
+    │   ├── max_engine_coolant_temp_attack_masquerade.csv
+    │   ├── max_speedometer_attack_1_masquerade.csv
+    │   ├── max_speedometer_attack_2_masquerade.csv
+    │   ├── max_speedometer_attack_3_masquerade.csv
+    │   ├── metadata.json
+    │   ├── reverse_light_off_attack_1_masquerade.csv
+    │   ├── reverse_light_off_attack_2_masquerade.csv
+    │   ├── reverse_light_off_attack_3_masquerade.csv
+    │   ├── reverse_light_on_attack_1_masquerade.csv
+    │   ├── reverse_light_on_attack_2_masquerade.csv
+    │   └── reverse_light_on_attack_3_masquerade.csv
+    └── DBC/
 
 ## 🧠 Models Evaluated
 
