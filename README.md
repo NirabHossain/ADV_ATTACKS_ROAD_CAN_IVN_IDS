@@ -114,3 +114,9 @@ Verma et al., *PLOS ONE*, 2024
 
 ## 📁 Repository Structure
 
+## Framework Overview
+
+<p align="center">
+  <img src="workflow.png" alt="Workflow for IDS training, adversarial IVN frame generation, and
+evaluation of benign and adversarial predictions with FN, FP, and MCC." width="900"/>
+</p>
