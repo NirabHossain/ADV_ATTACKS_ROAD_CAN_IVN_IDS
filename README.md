@@ -7,6 +7,9 @@ The work systematically analyzes **false alarms (false positives)** and **missed
 
 
 This repository accompanies the research paper: 
+
+📄 Paper: https://arxiv.org/abs/2602.02781
+
 [![arXiv](https://img.shields.io/badge/arXiv-2602.02781-b31b1b.svg)](https://arxiv.org/abs/2602.02781)
 
 > **Evaluating False Alarm and Missing Attacks in CAN IDS**  
