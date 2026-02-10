@@ -12,6 +12,19 @@ This repository accompanies the research paper:
 
 ---
 
+## 📖 Citation
+
+If you use this code or the associated research in your work, please cite our paper:
+
+```bibtex
+@article{hossain2026evaluating,
+  title   = {Evaluating False Alarm and Missing Attacks in CAN IDS},
+  author  = {Hossain, Nirab and Moriano, Pablo},
+  journal = {arXiv preprint arXiv:2602.02781},
+  year    = {2026}
+}
+```
+
 ## 📌 Project Overview
 
 Modern vehicles rely on the CAN bus for safety-critical communication but lack built-in security mechanisms. Machine-learning–based IDS achieve strong detection accuracy under benign conditions, yet their **robustness against adversarial manipulation remains insufficiently understood**.
