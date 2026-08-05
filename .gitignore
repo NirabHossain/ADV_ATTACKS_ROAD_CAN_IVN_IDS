@@ -3,5 +3,5 @@ models/
 old/
 .DS_Store
 Presentation_QA_Prep.md
-CAN_IDS_Adversarial_Robustness_Presentation.pptx
-ieee-csr-presentation.pptx
+*.pptx
+verify_pptx_results.ipynb

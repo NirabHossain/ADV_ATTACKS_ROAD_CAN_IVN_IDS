@@ -32,6 +32,12 @@ If you use this code or the associated research in your work, please cite our pa
 }
 ```
 
+## Presentation
+
+A PDF version of the presentation is available [here](link-to-presentation.pdf). The figures provide a visual guide to the main patterns in the tabulated results and may help readers spot high-level trends across scenarios more quickly than scanning the raw tables.
+
+However, the figures summarize the results using measures such as means and ratios and do not come close to capturing the full story behind the data. Please refer to the original tables in the paper for a complete interpretation of the results.
+
 ## 📌 Project Overview
 
 Modern vehicles rely on the CAN bus for safety-critical communication but lack built-in security mechanisms. Machine-learning–based IDS achieve strong detection accuracy under benign conditions, yet their **robustness against adversarial manipulation remains insufficiently understood**.
