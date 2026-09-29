@@ -300,7 +300,9 @@ print('ART', art.__version__)
 ## 📝 Version Notes
 
 **2026-09-29**
-- `preprocessing.ipynb`: corrected the capture mapping for RLOFFA and RLONA. Previously, `rloffa2`/`rloffa3` were generated from capture 1 and `rlona1`/`rlona3` from capture 2. The files in `preprocessed/` and the results in `results/` were generated following the commit `0556cd6` and match the tables in the paper.
+- README updated to describe the evaluation setup and the changes.
+
+- `preprocessing.ipynb`: corrected the capture mapping for RLOFFA and RLONA. Previously, `rloffa2`/`rloffa3` were generated from capture 1 and `rlona1`/`rlona3` from capture 2. The files in `preprocessed/` and the results in `results/` were generated at commit `0556cd6` and match the tables in the paper.
 To reproduce the tables in the paper, use the provided files in `preprocessed/` without re-running `preprocessing.ipynb`, or check out commit `0556cd6`.
 
 - Adversarial evaluation (`ADV_Attacks_FP`, `ADV_Attacks_FN`, `ADV_Attacks_MCC`) applies a CAN ID ≤ 1068 filter in `constraint_compliant`, which covers about 70% of frames. Because of this filter, CSA attack frames (ID 1760) are not included in the missed-attack evaluation, and MECTA missed-attack results are based on 6 frames.
