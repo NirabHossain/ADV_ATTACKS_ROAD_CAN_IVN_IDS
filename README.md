@@ -88,6 +88,7 @@ Train five classifiers for binary frame-level IDS:
   - **CAN ID and DLC fixed**
   - **payload bytes only**
   - values **clipped to [0, 255]**
+  - The released code also filtered frames by **CAN ID ≤ 1068 (approximately 70%)** during evaluation. 
 - Generate adversarial frames using **FGSM / BIM / PGD** with budgets **ε ∈ {1, 5}**
 - Use a differentiable **DNN surrogate** to craft attacks; reuse adversarial samples to evaluate shallow models (transfer-style).
 
