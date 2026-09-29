@@ -75,7 +75,7 @@ How do shallow ML and DNN-based CAN IDS differ in **robustness to adversarial ma
 
 ### Phase 1 — Dataset + Frame-Level Modeling
 - Use the **ROAD CAN IDS dataset** (12 ambient captures, 33 attack captures; ~3.5 hours of CAN traffic).  
-- Treat each CAN frame **independently** (no windowing): features are payload bytes **D0–D7**, label is benign (0) vs malicious (1).  
+- Treat each CAN frame **independently** (no windowing): features are CAN ID, DLC and payload bytes **D0–D7** (only the payload is perturbed), label is benign (0) vs malicious (1).  
 
 ### Phase 2 — Train IDS Baselines
 Train five classifiers for binary frame-level IDS:
@@ -122,7 +122,7 @@ All models operate at the **frame level**, using **CAN payload bytes (D0–D7)**
 
 ## 🧪 Adversarial Threat Model
 
-- **White-box attacker**
+- **White-box on the DNN; adversarial samples transferred to shallow models**
 - **Protocol-compliant constraints**
   - CAN ID and DLC fixed
   - Payload bytes only
@@ -209,6 +209,7 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
 - **`preprocessing.ipynb`**:
   - Notebook to preprocess ROAD CAN log data and prepare inputs for IDS and adversarial experiments.
   - Generated preprocessed data saved in `preprocessed/` and merged attack data saved as `results/attack_data.csv`.
+  - Note: re-running this notebook produces data that differs from the paper's tables; see [Version Notes](#-version-notes).
 
 - **`Stat_breakdown.ipynb`**:
   - Notebook for statistical breakdown.
@@ -240,7 +241,7 @@ evaluation of benign and adversarial predictions with FN, FP, and MCC." width="9
   ROAD dataset directory (raw logs + extracted signals).
 
 - **`preprocessed/`**  
-  Intermediate preprocessed datasets/features used by notebooks.
+  Intermediate preprocessed datasets/features used by notebooks. These files match the paper's tables; see [Version Notes](#-version-notes).
 
 - **`models/`**  
   Saved trained models.
@@ -296,6 +297,17 @@ print('ART', art.__version__)
 
 ---
 
+## 📝 Version Notes
+
+**2026-09-29**
+- `preprocessing.ipynb`: corrected the capture mapping for RLOFFA and RLONA. Previously, `rloffa2`/`rloffa3` were generated from capture 1 and `rlona1`/`rlona3` from capture 2. The files in `preprocessed/` and the results in `results/` were generated following the commit `0556cd6` and match the tables in the paper.
+To reproduce the tables in the paper, use the provided files in `preprocessed/` without re-running `preprocessing.ipynb`, or check out commit `0556cd6`.
+
+- Adversarial evaluation (`ADV_Attacks_FP`, `ADV_Attacks_FN`, `ADV_Attacks_MCC`) applies a CAN ID ≤ 1068 filter in `constraint_compliant`, which covers about 70% of frames. Because of this filter, CSA attack frames (ID 1760) are not included in the missed-attack evaluation, and MECTA missed-attack results are based on 6 frames.
+
+
+
+---
 
 ## Acknowledgement
 
