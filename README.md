@@ -21,16 +21,32 @@ The work systematically analyzes **false alarms (false positives)** and **missed
 
 ## 📖 Citation
 
-If you use this code or the associated research in your work, please cite our paper:
+If you use this code or the associated research, please cite
+our published IEEE CSR 2026 paper:
+
+**Hossain, N., & Moriano, P. (2026).**
+Evaluating False Alarm and Missing Attacks in CAN IDS.
+*2026 IEEE International Conference on Cyber Security and
+Resilience (CSR)*, pp. 513–520.
+
+**DOI:** https://doi.org/10.1109/CSR69374.2026.11759798
+
+### BibTeX
 
 ```bibtex
-@article{hossain2026evaluating,
-  title   = {Evaluating False Alarm and Missing Attacks in CAN IDS},
-  author  = {Hossain, Nirab and Moriano, Pablo},
-  journal = {arXiv preprint arXiv:2602.02781},
-  year    = {2026}
+@INPROCEEDINGS{Hossain:2026:False:Alarms:Missing:Attacks:CAN,
+  author={Hossain, Nirab and Moriano, Pablo},
+  booktitle={2026 IEEE International Conference on Cyber Security and Resilience (CSR)},
+  title={Evaluating False Alarm and Missing Attacks in CAN IDS},
+  year={2026},
+  volume={},
+  number={},
+  pages={513-520},
+  keywords={Building information management;Controller area networks;Modeling;Automatic speech recognition;Printing;Robustness;Vehicles;Payloads;Protocols;Machine learning;CPS Security;Intrusion Detection;Controller Area Networks;Machine Learning Security;Adversarial Machine Learning},
+  doi={10.1109/CSR69374.2026.11759798}
 }
 ```
+
 
 ## Presentation
 

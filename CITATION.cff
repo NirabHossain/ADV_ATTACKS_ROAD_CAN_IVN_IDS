@@ -1,0 +1,55 @@
+
+cff-version: 1.2.0
+message: "If you use this code or the associated research, please cite our published IEEE CSR 2026 paper."
+type: software
+
+title: "Evaluating False Alarm and Missing Attacks in CAN IDS"
+
+authors:
+  - family-names: Hossain
+    given-names: Nirab
+  - family-names: Moriano
+    given-names: Pablo
+
+repository-code: "https://github.com/NirabHossain/ADV_ATTACKS_ROAD_CAN_IVN_IDS"
+
+preferred-citation:
+  type: conference-paper
+
+  authors:
+    - family-names: Hossain
+      given-names: Nirab
+    - family-names: Moriano
+      given-names: Pablo
+
+  title: "Evaluating False Alarm and Missing Attacks in CAN IDS"
+
+  collection-title: "2026 IEEE International Conference on Cyber Security and Resilience (CSR)"
+
+  year: 2026
+
+  # volume: {}
+  # number: {}
+
+  start: 513
+  end: 520
+
+  keywords:
+    - "Building information management"
+    - "Controller area networks"
+    - "Modeling"
+    - "Automatic speech recognition"
+    - "Printing"
+    - "Robustness"
+    - "Vehicles"
+    - "Payloads"
+    - "Protocols"
+    - "Machine learning"
+    - "CPS Security"
+    - "Intrusion Detection"
+    - "Controller Area Networks"
+    - "Machine Learning Security"
+    - "Adversarial Machine Learning"
+
+  doi: "10.1109/CSR69374.2026.11759798"
+  url: "https://doi.org/10.1109/CSR69374.2026.11759798"
